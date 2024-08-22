@@ -1,0 +1,25 @@
+<div class="create-reminder-container">
+  <h2>Create Reminder</h2>
+  <form (ngSubmit)="onSubmit()">
+    <input
+      type="text"
+      placeholder="Title"
+      [(ngModel)]="title"
+      name="title"
+      required
+    />
+    <textarea
+      placeholder="Description"
+      [(ngModel)]="description"
+      name="description"
+      required
+    ></textarea>
+    <input
+      type="date"
+      [(ngModel)]="date"
+      name="date"
+      required
+    />
+    <button type="submit">Create</button>
+  </form>
+</div>

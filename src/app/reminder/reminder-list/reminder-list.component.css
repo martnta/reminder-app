@@ -1,0 +1,10 @@
+mat-card {
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #d32f2f;
+  color: white;
+}
