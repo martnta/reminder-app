@@ -1,9 +1,17 @@
-<div *@if="reminders.length === 0">No reminders found</div>
-<mat-card class="mat-card" *@for="let reminder of reminders">
-  <mat-card-title>{{ reminder.title }}</mat-card-title>
-  <mat-card-subtitle>{{ reminder.date  }}</mat-card-subtitle>
-  <mat-card-content>{{ reminder.description }}</mat-card-content>
-  <button mat-button color="warn" (click)="deleteReminder(reminder._id)">
-    Delete
-  </button>
-</mat-card>
+<div class="reminder-list">
+  <mat-card *@for="let reminder of reminders" class="reminder-card">
+    <mat-card-title>{{ reminder.title }}</mat-card-title>
+    <mat-card-content>
+      <p>{{ reminder.description }}</p>
+      <p>{{ reminder.date  }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button color="warn" (click)="deleteReminder(reminder._id)">Delete</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<!-- If no reminders are available -->
+<div *@if="reminders.length === 0">
+  <p>No reminders found. Please add a new reminder.</p>
+</div>

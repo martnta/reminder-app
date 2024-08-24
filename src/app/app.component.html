@@ -8,13 +8,13 @@
       <a routerLink="/reminders" routerLinkActive="active">Reminders</a>
       <a routerLink="/create-reminder" routerLinkActive="active">Create Reminder</a>
 
-      <span *ngIf="!isAuthenticated()">
+      <span *@if="!isAuthenticated()">
         <a routerLink="/login" routerLinkActive="active">Login</a>
         <a routerLink="/register" routerLinkActive="active">Register</a>
       </span>
 
-      <span *ngIf="isAuthenticated()">
-        <button (click)="logout()">Logout</button>
+      <span *@if="isAuthenticated()">
+        <button>Logout</button>
       </span>
     </div>
   </nav>

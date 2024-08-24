@@ -1,0 +1,9 @@
+<div class="reminder-container">
+  <h2>Reminders</h2>
+  
+  <!-- Create Reminder Component -->
+  <app-create-reminder (newReminderAdded)="onNewReminderAdded($event)"></app-create-reminder>
+
+  <!-- Reminder List Component -->
+  <app-reminder-list [reminders]="reminders" (reminderUpdated)="onReminderUpdated($event)" (reminderDeleted)="onReminderDeleted($event)"></app-reminder-list>
+</div>

@@ -4,13 +4,16 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-reminder',
+ 
   templateUrl: './create-reminder.component.html',
   styleUrls: ['./create-reminder.component.css'],
+
 })
 export class CreateReminderComponent {
   title = '';
   description = '';
   date = '';
+  userId  = '';
 
   constructor(private reminderService: ReminderService, private router: Router) {}
 
@@ -19,6 +22,7 @@ export class CreateReminderComponent {
       title: this.title,
       description: this.description,
       date: this.date,
+      userId: this.userId
     };
 
     this.reminderService.createReminder(newReminder).subscribe(() => {
